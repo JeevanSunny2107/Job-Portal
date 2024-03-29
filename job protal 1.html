@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .job {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Portal</h1>
+        <!-- Registration Form -->
+        <div id="registration" class="form-group">
+            <h2>Register</h2>
+            <label for="regUsername">Username:</label>
+            <input type="text" id="regUsername" placeholder="Enter username">
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword" placeholder="Enter password">
+            <button onclick="register()">Register</button>
+        </div>
+        <!-- Login Form -->
+        <div id="login" class="form-group">
+            <h2>Login</h2>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" placeholder="Enter username">
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Enter password">
+            <button onclick="login()">Login</button>
+        </div>
+        <!-- Job Listings -->
+        <div id="jobListings">
+            <h2>Job Listings</h2>
+            <div class="job">
+                <h3>Job Title 1</h3>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Location: New York, USA</p>
+            </div>
+            <div class="job">
+                <h3>Job Title 2</h3>
+                <p>Description: Nulla facilisi. Fusce auctor nunc at velit aliquet.</p>
+                <p>Location: London, UK</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mock registration function
+        function register() {
+            var username = document.getElementById('regUsername').value;
+            var password = document.getElementById('regPassword').value;
+            // Perform validation (e.g., check for empty fields)
+            if (username && password) {
+                alert('Registration successful! Please log in.');
+                // Clear registration fields
+                document.getElementById('regUsername').value = '';
+                document.getElementById('regPassword').value = '';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        // Mock login function
+        function login() {
+            var username = document.getElementById('loginUsername').value;
+            var password = document.getElementById('loginPassword').value;
+            // Perform validation (e.g., check for empty fields)
+            if (username && password) {
+                alert('Login successful!');
+                // Clear login fields
+                document.getElementById('loginUsername').value = '';
+                document.getElementById('loginPassword').value = '';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+</html>

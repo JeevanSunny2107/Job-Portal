@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="/register">Register</a></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job Listings</title>
+        <h1>Job Listings</h1>
+        <div id="jobs">
+            {% for job in jobs %}
+            <div class="job">
+                <h2>{{ job.title }}</h2>
+                <p>{{ job.description }}</p>
+                <p>{{ job.location }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Profile</title>
+</head>
+<body>
+    <h1>Candidate Profile</h1>
+    <h2>{{ candidate.name }}</h2>
+    <p>Skills: {{ candidate.skills }}</p>
+    <p>Experience: {{ candidate.experience }}</p>
+    <p>Education: {{ candidate.education }}</p>
+    <p>Contact Info: {{ candidate.contact_info }}</p>
+</body>
+</html>
